@@ -52,7 +52,7 @@ Note : We have a script which will inject at volume of Postgres Container to cre
 - Error Handling
 - Authorization framework Oauth JWT using Spring security
 - DDL Creation using JPA Hbernate
-- Unit Test (WIP)
+- Basic Unit Test - Controller Layer, Service Layer, Repository Layer added
   
 ### Good to have feature
 
