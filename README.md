@@ -16,7 +16,7 @@ A backend service (Message-Service, Auth Service) using Java and Spring Boot div
   other without hard-coding the hostname and port.
 * `api-gatway-service`: API Gateway created with Spring Cloud Gateway that uses the discovery-service to send the
   requests to the services.
-* `auth-service`: Simple REST service created with Spring Boot, Spring Cloud Oauth2, Spring Data JPA, PostgresSql to
+* `auth-service`: Simple REST service created with Spring Boot, Spring Cloud Security, Spring Data JPA, PostgresSql to
   use as an authorization service.
 * `message-service`: Simple REST service created with Spring Boot, Spring Data JPA, PostgresSql to use as a resource
   service.
