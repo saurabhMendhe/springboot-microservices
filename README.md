@@ -8,7 +8,7 @@ Create a simple application which checks if a word is a palindrome. The applicat
 ### Overview
 A backend service (Message-Service, Auth Service) using Java and Spring Boot divided into three layers REST (Controller), business (Service) and data access (Repository) layers with basic CRUD operation. 
 
-### The architecture is composed by four services:
+#### The architecture is composed by four services:
 
 ![test drawio (2)](https://user-images.githubusercontent.com/13719978/175897850-c3402d68-5c09-45d4-83fd-ea77d3f18a70.png)
 
