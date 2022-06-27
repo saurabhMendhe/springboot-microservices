@@ -77,7 +77,8 @@ Note : We have a script which will inject at volume of Postgres Container to cre
 - Health Check
 - Monitoring based on various resource consumption factors
 - Log based Alerts Policy and notify on slack/email to stakeholder
-- Http Status based Alerts Policy. eg. Alerting the Authorize request
+- Http Status based Alerts Policy. eg. Alerting the unAuthorize request
+- BDD test cases this approach will cover from bussiness point view
 
 #### Automation and Release Management
 - Github action to define deployement worflow
