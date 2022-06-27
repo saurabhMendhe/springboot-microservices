@@ -28,6 +28,22 @@ A backend service (Message-Service, Auth Service) using Java and Spring Boot div
 * PostgresSQL
 * JDK 17+
 
+### Code Structure by Layers design
+
+A way to place the classes is by layer. By following this structure all controllers can be placed in controllers package and services under services package and all entities under domain or model etc.
+
+com \
+&emsp;+- qlik \
+&emsp;&emsp;    +- assignment \
+&emsp;&emsp;&emsp;        +- MyApplication.java \
+&emsp;&emsp;&emsp;            +- controller \
+&emsp;&emsp;&emsp;            +- domain \
+&emsp;&emsp;&emsp;            +- exception \
+&emsp;&emsp;&emsp;            +- repository \
+&emsp;&emsp;&emsp;            +- security\
+&emsp;&emsp;&emsp;            +- service\
+&emsp;&emsp;&emsp;            +- util
+
 
 ### Microservice Running Process:
 
@@ -40,8 +56,8 @@ A backend service (Message-Service, Auth Service) using Java and Spring Boot div
     --- |-------------------------------------| ---
    eureka server | http://localhost:8761/              | Eureka Server is an application that holds the information about all client-service applications. Every Micro service will register into the Eureka server and Eureka server knows all the client applications running on each port and IP address. Eureka Server is also known as Discovery Server
    Api Gatway | http://localhost:8080/              | Whenever we think of microservices and distributed applications, the first point that comes to mind is security.Obviously, in distributed architectures, it is really difficult to manage security as we do not have much control over the application. So in this situation, we always need to have a central entry point to this distributed architecture. This is the reason why, in microservices, we have a separate and dedicated layer for all these purposes. This layer is known as the API Gateway. It is an entry point for a microservice's architecture.
-   Auth Service | http://localhost:8080/api/message   | Api Docs : http://localhost:8080/api/message/api-docs, Swagger-UI http://localhost:8080/api/message/swagger-ui.html .Authorization server to authenticate your identity to provide access_token, which you can use to request data from resource server
-   Message Service | http://localhost:8080/auth/user     |Api Docs : http://localhost:8080//auth/user/api-docs, Swagger-UI http://localhost:8080//auth/user/swagger-ui.html Create a simple application which checks if a word is a palindrome. The application should following capabilities: Submit/post messages,List received messages,Retrieve a specific message and determine if it is a palindrome, Delete a specific message
+   Auth Service | http://localhost:8080/api/message   | Api Docs : http://localhost:8080/api/message/api-docs,\ Swagger-UI http://localhost:8080/api/message/swagger-ui.html .\Authorization server to authenticate your identity to provide access_token, which you can use to request data from resource server
+   Message Service | http://localhost:8080/auth/user     |Api Docs : http://localhost:8080//auth/user/api-docs\, Swagger-UI http://localhost:8080//auth/user/swagger-ui.html\ Create a simple application which checks if a word is a palindrome. The application should following capabilities: Submit/post messages,List received messages,Retrieve a specific message and determine if it is a palindrome, Delete a specific message
    PGAdmin | http://localhost:16543     | Login/Password : test@gmail.com/test123. Create a server and use hostame/user/password : postgres/user/admin
 
 Note : We have a script which will inject at volume of Postgres Container to create the database used by Auther Service and Message Service
