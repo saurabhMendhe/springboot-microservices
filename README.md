@@ -33,7 +33,7 @@ A backend service (Message-Service, Auth Service) using Java and Spring Boot div
 A way to place the classes is by layer. By following this structure all controllers can be placed in controllers package and services under services package and all entities under domain or model etc.
 
 com \
-&emsp;+- qlik \
+&emsp;+- sample \
 &emsp;&emsp;    +- assignment \
 &emsp;&emsp;&emsp;        +- MyApplication.java \
 &emsp;&emsp;&emsp;            +- controller \
